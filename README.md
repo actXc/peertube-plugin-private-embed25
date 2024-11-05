@@ -23,3 +23,8 @@ and need to convert it to:
 ```
 "restrict-embedding-domain-42": ["https://example.com/"],
 ```
+
+## Author and contributors
+
+* The plugin was created by [osiris86](https://github.com/osiris86/peertube-plugin-private-embed).
+* Code for options to use multiple domains was added by [rdroro]{https://gitlab.com/rdroro/peertube-plugin-private-embed-multiple-domain/).
