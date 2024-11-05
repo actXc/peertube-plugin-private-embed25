@@ -1,6 +1,6 @@
 async function register({
   registerHook,
-  peertubeHelpers: { videos },
+  peertubeHelpers: { videos, logger },
   getRouter,
   settingsManager,
   storageManager,
@@ -26,7 +26,7 @@ async function register({
         return { allowed: true }
       }
 
-      const allowed = restrictEmbeddingDomain === referer
+      const allowed = restrictEmbeddingDomain.includes(referer)
 
       return {
         allowed: allowed,
@@ -41,7 +41,7 @@ async function register({
       if (!body.pluginData) return
 
       const restrictEmbedding = body.pluginData['restrict-embedding'] === 'true'
-      let restrictEmbeddingDomain = body.pluginData['restrict-embedding-domain']
+      let restrictEmbeddingDomain = body.pluginData['restrict-embedding-domain'].split(",")
       if (!restrictEmbedding) {
         restrictEmbeddingDomain = ''
       }
