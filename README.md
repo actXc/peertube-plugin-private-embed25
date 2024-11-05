@@ -6,7 +6,15 @@ When selecting "Not listed" from the privacy options, the user can check a box t
 
 ![Screenshot](docs/screenshot.png)
 
+Ensure that the domain contains the protocol and a trailing slash like shown in the screenshot!
+
 If checked, the video can no longer be viewed without being embedded on the domain entered in the respective input field.
+
+Multiple domains can be added separated by comma.
+
+## Remove restriction
+
+If you want to remove the restriction ensure to remove the domains from the domain field, then uncheck the box and save the changes.
 
 ## Update from previous version
 
