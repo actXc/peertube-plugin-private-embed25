@@ -1,9 +1,11 @@
 {
-  "name": "peertube-plugin-private-embed",
-  "description": "PeerTube plugin to privately embed videos",
-  "version": "1.0.1",
-  "author": "osiris86",
-  "bugs": "https://github.com/jfqd/peertube-plugin-private-embed/issues",
+  "name": "peertube-plugin-private-embed25",
+  "description": "PeerTube plugin to privately embed videos (updated in 2025)",
+  "version": "1.0.2",
+  "author": "jfqd repaired osiris86 and others",
+  "bugs": {
+    "url": "https://github.com/actXc/peertube-plugin-private-embed25/issues"
+  },
   "license": "AGPL-3.0-or-later",
   "clientScripts": [
     {
@@ -17,7 +19,7 @@
   "engine": {
     "peertube": ">=5.0.1"
   },
-  "homepage": "https://github.com/jfqd/peertube-plugin-private-embed",
+  "homepage": "https://github.com/actXc/peertube-plugin-private-embed25",
   "keywords": [
     "peertube",
     "plugin"
@@ -36,5 +38,13 @@
   "devDependencies": {
     "@peertube/peertube-types": "^4.2.2",
     "esbuild": "^0.14.36"
+  },
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/actXc/peertube-plugin-private-embed25"
   }
 }
