@@ -36,3 +36,5 @@ and need to convert it to:
 
 * The plugin was created by [osiris86](https://github.com/osiris86/peertube-plugin-private-embed).
 * Code for options to use multiple domains was added by [rdroro](https://gitlab.com/rdroro/peertube-plugin-private-embed-multiple-domain/).
+* jfqd upgraded to use it with peertube > v.5,
+* I try to publish jfqd to the plugins in Peertube, but its my first attemt to do so.
