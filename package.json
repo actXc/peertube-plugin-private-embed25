@@ -1,7 +1,7 @@
 {
   "name": "peertube-plugin-private-embed25",
   "description": "PeerTube plugin to privately embed videos (updated in 2025)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "jfqd repaired osiris86 and others",
   "bugs": {
     "url": "https://github.com/actXc/peertube-plugin-private-embed25/issues"

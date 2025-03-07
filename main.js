@@ -18,15 +18,20 @@ async function register({
       const restrictEmbedding = await storageManager.getData(
         'restrict-embedding-' + video.id
       )
-      const restrictEmbeddingDomain = await storageManager.getData(
+      let restrictEmbeddingDomain = await storageManager.getData(
         'restrict-embedding-domain-' + video.id
       )
+
+      // Ensure restrictEmbeddingDomain is an array
+      if (!Array.isArray(restrictEmbeddingDomain)) {
+        restrictEmbeddingDomain = restrictEmbeddingDomain ? [restrictEmbeddingDomain] : []
+      }
 
       if (!restrictEmbedding) {
         return { allowed: true }
       }
 
-      const allowed = restrictEmbeddingDomain.includes(referer)
+      const allowed = restrictEmbeddingDomain.some(domain => referer && referer.startsWith(domain))
 
       return {
         allowed: allowed,
