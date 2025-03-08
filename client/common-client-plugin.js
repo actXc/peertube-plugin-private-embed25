@@ -62,7 +62,7 @@ async function register({ registerHook, peertubeHelpers, registerVideoField }) {
         return { error: false }
       }
       const currentValue = formValues.pluginData['restrict-embedding-domain']
-      if (!currentValue || currentValue.length === 0) {
+      if (!currentValue || (Array.isArray(currentValue) && currentValue.length === 0) {
         const restrictEmbeddingErrorNotEmpty = await peertubeHelpers.translate(
           'restrict-embedding-error-not-empty'
         )
@@ -71,7 +71,7 @@ async function register({ registerHook, peertubeHelpers, registerVideoField }) {
           text: restrictEmbeddingErrorNotEmpty
         }
       }
-      if (
+      if (typeof currentValue === 'string' && 
         currentValue.indexOf('https://') !== 0 &&
         currentValue.indexOf('http://') !== 0
       ) {

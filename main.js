@@ -46,9 +46,11 @@ async function register({
       if (!body.pluginData) return
 
       const restrictEmbedding = body.pluginData['restrict-embedding'] === 'true'
-      let restrictEmbeddingDomain = body.pluginData['restrict-embedding-domain'].split(",")
+      let restrictEmbeddingDomain = body.pluginData['restrict-embedding-domain'] 
+        ? body.pluginData['restrict-embedding-domain'].split(",")
+        : []
       if (!restrictEmbedding) {
-        restrictEmbeddingDomain = ''
+        restrictEmbeddingDomain = []
       }
 
       storageManager.storeData(
